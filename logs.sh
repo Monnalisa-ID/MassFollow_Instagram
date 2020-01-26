@@ -1,4 +1,7 @@
 #!/bin/bash
+# update on : 2020 minggu 26 januari
+# selamat memakai :D
+# oke saya update tools. masalah nya adalah ketika anda memakai auto follow. lalu mau mengikuti sesorang malah yang di ikuti itu tidak sesuai ada kesalahan sama tools saya sama pas bagian " idd" terima kasih sebelum nya sama @teguh
 hijau=$(tput setaf 2)
 merah=$(tput setaf 1)
 normal=$(tput sgr0)
@@ -41,8 +44,8 @@ else
 fi
 }
 function aexzzzz(){
-           idd=$(curl "https://instagram.com/`cat user`" -H 'authority: www.instagram.com' -H 'upgrade-insecure-requests: 1' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36' -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7' --compressed --silent -L | grep -Po '(?<=id":")[^"]*' | tail -1)
-           xixixixixixixi=$(curl -s "https://www.instagram.com/web/friendships/$idd/follow/" -X POST \
+           idd=$(curl "https://instagram.com/`cat user`" -H 'authority: www.instagram.com' -H 'upgrade-insecure-requests: 1' -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/75.0.3770.142 Safari/537.36' -H 'accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3' -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7' --compressed --silent -L |grep -Po '(?<=id":")[^"}]*'|grep -o 'profilePage_.*'|cut -d '_' -f2)
+           xixixixixixixi=$(curl -s "https://www.instagram.com/web/friendships/${idd}/follow/" -X POST \
            -H 'origin: https://www.instagram.com' \
            -H 'user-agent: Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36' \
            -H 'accept-encoding: gzip, deflate, br' -H 'accept-language: en-US,en;q=0.9' -H 'x-requested-with: XMLHttpRequest' -H "cookie: mcd=$mcd; csrftoken=$csrf; ds_user_id=$usid; sessionid=$session; rur=$rur" -H "x-csrftoken: $csrf" -H "x-instagram-ajax: $rolout" -H 'content-type: application/x-www-form-urlencoded' -H 'accept: */*' -H 'authority: www.instagram.com' -H 'content-length: 0' --compressed)
