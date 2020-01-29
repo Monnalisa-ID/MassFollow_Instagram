@@ -1,7 +1,6 @@
 #!/bin/bash
 # update on : 2020 minggu 26 januari
 # selamat memakai :D
-# oke saya update tools. masalah nya adalah ketika anda memakai auto follow. lalu mau mengikuti sesorang malah yang di ikuti itu tidak sesuai ada kesalahan sama tools saya sama pas bagian " idd" terima kasih sebelum nya sama @teguh
 hijau=$(tput setaf 2)
 merah=$(tput setaf 1)
 normal=$(tput sgr0)
